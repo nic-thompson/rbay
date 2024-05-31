@@ -21,7 +21,7 @@ export const getItems = async (ids: string[]) => {
 
 	const items = await Promise.all(commands);
 
-	items.map((item, index) => {
+	return items.map((item, index) => {
 		if (Object.keys(item).length === 0) {
 			return null;
 		}
